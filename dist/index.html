@@ -7,24 +7,27 @@
   <title>Leaderboard List App</title>
 <script defer src="bundle.js"></script></head>
 <body>
-  <section>
+  <header>
     <h1>Leaderboard</h1>
-    <main class="container">
-      <div class="left-container">
-        <div class="score-header">
-          <h3>Recent scores</h3>
-          <div><button type="button">Refresh</button></div>
-        </div>
+  </header>
+  <main class="container">
+    <div class="left-container">
+      <div class="score-header">
+        <h3>Recent scores</h3>
+        <div><button type="button">Refresh</button></div>
       </div>
-      <div class="right-container">
-        <h3>Add your score</h3>
-        <form class="form">
-				<input type="text" placeholder="Your name" />
-				<input type="text" placeholder="Your score" />
-				<button type="submit">Submit</button>
-			  </form>
+      <div>
+        <ul id="scores"></ul>
       </div>
-    </main>
-  </section>  
+    </div>
+    <div class="right-container">
+      <h3>Add your score</h3>
+      <form class="form">
+			<input type="text" placeholder="Your name" />
+			<input type="text" placeholder="Your score" />
+			<button type="submit">Submit</button>
+		  </form>
+    </div>
+  </main>
 </body>
 </html>
