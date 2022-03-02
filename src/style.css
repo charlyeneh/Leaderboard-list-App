@@ -6,17 +6,16 @@
 
 body {
   padding: 1rem;
-  margin-left: 0.5rem;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .container {
   display: flex;
   flex-direction: row;
-  margin-left: 0.8rem;
+  margin-left: 0.5rem;
 }
 
 .left-container,
