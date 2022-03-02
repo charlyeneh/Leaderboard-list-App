@@ -6,17 +6,17 @@
 
 body {
   padding: 1rem;
-  margin-left: 2rem;
+  margin-left: 0.5rem;
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 2rem;
 }
 
 .container {
   display: flex;
   flex-direction: row;
-  margin-left: 4rem;
+  margin-left: 0.8rem;
 }
 
 .left-container,
@@ -34,25 +34,25 @@ h1 {
 
 .score-header h3 {
   margin-right: 2rem;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .score-header button {
   border: 1px solid black;
-  box-shadow: 2px 5px black;
+  box-shadow: 1px 2px black;
   padding: 0.3rem;
-  font-size: 1.2rem;
+  font-size: 0.5rem;
 }
 
 #scores {
   border: 1px solid black;
-  box-shadow: 2px 4px black;
+  box-shadow: 1px 2px black;
 }
 
 ul li {
   list-style: none;
   padding: 0.5rem 0.5rem;
-  font-size: 1.5rem;
+  font-size: 0.5rem;
 }
 
 .form {
@@ -63,15 +63,15 @@ ul li {
   display: block;
   width: 100%;
   margin-bottom: 1rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .right-container h3 {
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .right-container button {
-  font-size: 1.2rem;
+  font-size: 0.5rem;
   border: 1px solid black;
   box-shadow: 2px 4px black;
   float: right;
