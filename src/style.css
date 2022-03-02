@@ -19,7 +19,7 @@ h1 {
   margin-left: 4rem;
 }
 
-.left-container, 
+.left-container,
 .right-container {
   padding-right: 3rem;
   margin-top: 1rem;
@@ -49,7 +49,7 @@ h1 {
   box-shadow: 2px 4px black;
 }
 
-ul li{
+ul li {
   list-style: none;
   padding: 0.5rem 0.5rem;
   font-size: 1.5rem;
@@ -77,6 +77,6 @@ ul li{
   float: right;
 }
 
-li:nth-child(odd) { 
+li:nth-child(odd) {
   background-color: rgb(215, 223, 230);
 }
