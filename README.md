@@ -1,13 +1,13 @@
 # Leaderboard-list-App
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Leaderboard-list-App with Webpack
+# Leaderboard-list-App with Webpack and API.
 
-![screenshot](./src/image1.png)
+![screenshot](./src/leaderBoard1.png)
 
 > Description of the project.
 
-In this project, i created the structure of the Leaderboard-list-App.
+In this project, i created the structure of the Leaderboard-list-App and implemented the ADD and REFRESH functionalities, while consuming the given API.
 
 
 ## Built With
@@ -21,7 +21,7 @@ In this project, i created the structure of the Leaderboard-list-App.
   None
 
 - Technologies used
-  Use of webpack and ES6 syntax.
+  Use of webpack, API and ES6 syntax.
 
 ## Live Demo (if available)
 
