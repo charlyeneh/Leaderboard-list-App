@@ -116,17 +116,27 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_boardScores_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/boardScores.js */ \"./src/modules/boardScores.js\");\n\n\n\nconst showScores = document.getElementById('scores');\n\nconst displayBoard = () => {\n  _modules_boardScores_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"].forEach((myScore) => {\n    const scoreList = document.createElement('li');\n    scoreList.innerHTML = `${myScore.name}: ${myScore.score}`;\n    showScores.appendChild(scoreList);\n  });\n};\ndisplayBoard();\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_API_call_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/API_call.js */ \"./src/modules/API_call.js\");\n/* harmony import */ var _modules_dashboard_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/dashboard.js */ \"./src/modules/dashboard.js\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n\n\nconst addBtn = document.getElementById('add-btn');\nconst refresh = document.getElementById('refresh-btn');\n\naddBtn.addEventListener('click', (e) => {\n  e.preventDefault();\n  const nameInput = document.getElementById('name').value;\n  const scoreInput = document.getElementById('score').value;\n  if (nameInput && scoreInput >= 0) {\n    (0,_modules_API_call_js__WEBPACK_IMPORTED_MODULE_0__.postScores)(nameInput, scoreInput);\n    (0,_modules_dashboard_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n    document.getElementById('name').value = '';\n    document.getElementById('score').value = '';\n  }\n});\n\nrefresh.addEventListener('click', () => {\n  (0,_modules_dashboard_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n});\n\nwindow.addEventListener('DOMContentLoaded', () => {\n  (0,_modules_dashboard_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n});\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/modules/boardScores.js":
-/*!************************************!*\
-  !*** ./src/modules/boardScores.js ***!
-  \************************************/
+/***/ "./src/modules/API_call.js":
+/*!*********************************!*\
+  !*** ./src/modules/API_call.js ***!
+  \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst leaderScores = [\n  { name: 'Charly', score: 300 },\n  { name: 'Dera', score: 500 },\n  { name: 'Dahee', score: 250 },\n  { name: 'Ubo', score: 150 },\n  { name: 'Whoawa', score: 220 },\n  { name: 'Echelon', score: 200 },\n  { name: 'Nasa', score: 350 },\n  { name: 'Afunwa', score: 400 },\n];\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (leaderScores);\n\n//# sourceURL=webpack://webpack-demo/./src/modules/boardScores.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"postScores\": () => (/* binding */ postScores),\n/* harmony export */   \"getScores\": () => (/* binding */ getScores)\n/* harmony export */ });\nconst postScores = async (name, points) => {\n  const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/NlrHTuV2VXUQfLK9vHpQ/scores/', {\n    method: 'POST',\n    body: JSON.stringify({\n      user: name,\n      score: points,\n    }),\n    headers: {\n      'Content-type': 'application/json; charset=UTF-8',\n    },\n  });\n  const scores = response.json();\n  return scores;\n};\n\nconst getScores = async () => {\n  const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/NlrHTuV2VXUQfLK9vHpQ/scores/');\n  const scores = response.json();\n  return scores;\n};\n\n\n\n//# sourceURL=webpack://webpack-demo/./src/modules/API_call.js?");
+
+/***/ }),
+
+/***/ "./src/modules/dashboard.js":
+/*!**********************************!*\
+  !*** ./src/modules/dashboard.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _API_call_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./API_call.js */ \"./src/modules/API_call.js\");\n\n\nconst display = () => {\n  (0,_API_call_js__WEBPACK_IMPORTED_MODULE_0__.getScores)().then((scores) => {\n    const showScores = document.getElementById('scores');\n    showScores.innerHTML = '';\n    scores.result.forEach((el) => {\n      const html = `<li>${el.user}: ${el.score}</li>`;\n      showScores.insertAdjacentHTML('beforeend', html);\n    });\n    return scores;\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (display);\n\n//# sourceURL=webpack://webpack-demo/./src/modules/dashboard.js?");
 
 /***/ })
 
