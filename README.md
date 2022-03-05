@@ -3,7 +3,7 @@
 
 # Leaderboard-list-App with Webpack and API.
 
-![screenshot](./src/leaderBoard1.png)
+![screenshot](./src/leaderboard2.png)
 
 > Description of the project.
 
