@@ -10,6 +10,8 @@ body {
 
 h1 {
   font-size: 1.5rem;
+  font-style: oblique;
+  color: #072227;
 }
 
 .container {
@@ -20,8 +22,11 @@ h1 {
 
 .left-container,
 .right-container {
-  padding-right: 3rem;
+  padding-right: 1rem;
   margin-top: 1rem;
+  background-color: #35858b;
+  border-radius: 0.8rem;
+  padding-bottom: 0.8rem;
 }
 
 .score-header {
@@ -29,53 +34,76 @@ h1 {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
+  background-color: #4fbdba;
+  margin-top: 0.5rem;
+  margin-left: 0.1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .score-header h3 {
   margin-right: 2rem;
   font-size: 1rem;
+  font-style: oblique;
+}
+
+.right-container h3 {
+  background-color: #4fbdba;
+  margin-top: 0.5rem;
+  margin-left: 0.2rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-style: oblique;
 }
 
 .score-header button {
-  border: 1px solid black;
-  box-shadow: 1px 2px black;
-  padding: 0.3rem;
+  border: 1px solid #072227;
+  box-shadow: 1px 3px black;
+  padding: 0.2rem;
   font-size: 0.5rem;
 }
 
 #scores {
-  border: 1px solid black;
-  box-shadow: 1px 2px black;
+  border: 1px solid #072227;
+  box-shadow: 2px 3px black;
 }
 
 ul li {
   list-style: none;
   padding: 0.5rem 0.5rem;
-  font-size: 0.5rem;
+  font-size: 0.7rem;
+}
+
+.scores-container {
+  background-color: #4fbdba;
+  margin-left: 0.2rem;
 }
 
 .form {
   margin-top: 1rem;
+  margin-left: 0.2rem;
+  background-color: #4fbdba;
+  padding: 0.5rem;
+  padding-bottom: 0.5rem;
+  height: 5rem;
+  border-radius: 00.5rem;
 }
 
 .form input {
   display: block;
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-size: 0.8rem;
-}
-
-.right-container h3 {
-  font-size: 1rem;
 }
 
 .right-container button {
   font-size: 0.5rem;
-  border: 1px solid black;
-  box-shadow: 2px 4px black;
+  border: 1px solid #072227;
+  box-shadow: 1px 2px black;
   float: right;
 }
 
 li:nth-child(odd) {
-  background-color: rgb(215, 223, 230);
+  background-color: #35858b;
 }
